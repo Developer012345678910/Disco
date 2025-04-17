@@ -1,0 +1,172 @@
+:root {
+    --primary-color: rgb(0, 0, 0);
+    --secondary-color: rgb(255, 255, 255);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 100;
+}
+
+body {
+    background-color: var(--secondary-color);
+    background-image: url("bg_2.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header, footer {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5vh;
+    background-color: var(--secondary-color);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0px 0px 5px var(--primary-color);
+    animation: infinite 12s shadow-color;
+}
+
+h1 {
+    font-size: 5vh;
+    font-weight: bold;
+}
+
+#content {
+    width: 100vw;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5vh;
+    margin-bottom: 12.5vh;
+}
+
+.card {
+    width: calc(100vw - 5vh);
+    height: 10vh;
+    /*border-top: 1px solid var(--primary-color);*/
+    box-shadow: 0px 0px 5px var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5vh;
+    border-radius: 10px;
+    animation: 12s shadow-color infinite;
+}
+
+button {
+    width: 25vw;
+    height: 5vh;
+    color: var(--secondary-color);
+    border: hidden;
+    border-radius: 10px;
+    animation: 12s background-color infinite;
+}
+
+input[type="text"], input[type="color"] {
+    width: 25vw;
+    height: 5vh;
+    color: var(--primary-color);
+    border: hidden;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    overflow: hidden;
+    text-align: start;
+}
+
+#name {
+    height: 5vh;
+    font-size: 5vh;
+    font-weight: bold;
+    color: var(--primary-color);
+    border-radius: 0px;
+    border: hidden;
+    border-bottom: 2px solid var(--primary-color);
+    width: 40vw;
+}
+
+#light {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 2.5vh;
+    display: none;
+}
+
+#light button, .big-button, .clean-button {
+    height: 7vh;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    width: calc(50vw - 2.5vh - 1.25vh);
+    box-shadow: 0px 0px 5px var(--primary-color);
+    animation: none;
+}
+
+.big-button {
+    box-shadow: none;
+    color: var(--primary-color);
+    animation: 12s infinite shadow-color;
+}
+
+@keyframes background-color {
+    0% {
+        background-color: rgb(0, 0, 255);
+    }
+    33% {
+        background-color: rgb(0, 255, 0);
+    }
+    66% {
+        background-color: rgb(255, 0, 0);
+    }
+    100% {
+        background-color: rgb(0, 0, 255);
+    }
+}
+
+@keyframes shadow-color {
+    0% {
+        box-shadow: 0px 0px 5px rgb(0, 0, 255);
+    }
+    33% {
+        box-shadow: 0px 0px 5px rgb(0, 255, 0);
+    }
+    66% {
+        box-shadow: 0px 0px 5px rgb(255, 0, 0);
+    }
+    100% {
+        
+        box-shadow: 0px 0px 5px rgb(0, 0, 255);
+    }
+}
+
+@keyframes color {
+    0% {
+        color: rgb(0, 0, 255);
+    }
+    33% {
+        color: rgb(0, 255, 0);
+    }
+    66% {
+        color: rgb(255, 0, 0);
+    }
+    100% {
+        
+        color: rgb(0, 0, 255);
+    }
+}

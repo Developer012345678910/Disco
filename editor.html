@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Disco</title>
+</head>
+<body>
+    <header>
+        <input type="text" id="name" placeholder="Name...">
+    </header>
+    <div id="content">
+        <div class="card">
+            <p>Geschwindigkeit</p>
+            <input type="text" id="delay" value="1" maxlength="4">
+            <p style="position: absolute; right: 6vh;">ms</p>
+        </div>
+        <div class="card">
+            <p>1. Farbe</p>
+            <input type="color" id="color1">
+        </div>
+        <div class="card">
+            <p>2. Farbe</p>
+            <input type="color" id="color2">
+        </div>
+        <div class="card">
+            <p>3. Farbe</p>
+            <input type="color" id="color3">
+        </div>
+        <div class="card">
+            <p>4. Farbe</p>
+            <input type="color" id="color4">
+        </div>
+    </div>
+    <footer>
+        <button class="big-button" onclick="window.location.href = 'index.html';">Abbrechen</button>
+        <button class="big-button" onclick="addAnimation(); window.location.href = 'index.html';">Speichern</button>
+    </footer>
+    <div id="light">
+        <button onclick="stopLight();">Beenden</button>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
